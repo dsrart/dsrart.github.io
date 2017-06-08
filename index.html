@@ -25,7 +25,37 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-
+  
+  <!-- Changing images on home page
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script language="javascript" type="text/javascript">
+var timerid = 0;
+var images = new Array(	"/images/SpikeStool.jpg",
+			"/images/BarbWire_Baloons.JPG",
+            "/images/GreenPlasticWrapInstall_OrangeSpot.JPG",
+			"/images/In_the_Studio.jpg");
+var countimages = 0;
+function startTime()
+{
+	if(timerid)
+	{
+		timerid = 0;
+	}
+	var tDate = new Date();
+	
+	if(countimages == images.length)
+	{
+		countimages = 0;
+	}
+	if(tDate.getSeconds() % 5 == 0)
+    {
+        document.getElementById("img1").src = images[countimages];
+        countimages++;
+    }
+	
+	timerid = setTimeout("startTime()", 1000);
+}
+   </script>   
 </head>
 <body>
 
@@ -41,8 +71,9 @@
 <a class="button" href="DenisRovinskiy_CV.htm">CV</a>
 <a class="button" href="Bio.htm">Bio</a>
 	  </div>
-      <div class="eight columns category" style="margin-top: 10%">
-          <img class="u-max-full-width" src="In_the_Studio.jpg">
+      <div class="eight columns category" style="margin-top: 10%">      
+          onload="startTime(1);">
+<img id="img1" class="u-max-full-width" src="In_the_Studio.jpg" />
       </div>
      </div>
     </div>
