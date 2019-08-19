@@ -37,33 +37,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   
-  <!-- Changing images on home page
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script language="javascript" type="text/javascript">
-var timerid = 0;
-var images = new Array( "/images/Review_Installation.jpg", "/images/Untitled_Light_and_String.jpg", "/images/Untitled_Red_Green_Ceiling_Tiles.jpg", "images/1Day_Dark.jpg", "images/1Day_Light.jpg", "images/Untitled_Rope_Bag_3D_Plates_Hose.jpg", "/images/GreenPlasticWrap_in_Gallery_View.jpg");
-var countimages = 0;
-function startTime()
-{
-	if(timerid)
-	{
-		timerid = 0;
-	}
-	var tDate = new Date();
-	
-	if(countimages == images.length)
-	{
-		countimages = 0;
-	}
-	if(tDate.getSeconds() % 5 == 0)
-    {
-        document.getElementById("img1").src = images[countimages];
-        countimages++;
-    }
-	
-	timerid = setTimeout("startTime()", 1000);
-}
-   </script>   
+<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/872706a5b43d57edbb30e026ebaa2663.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>     
 </head>
 <body onload="startTime();">
 
