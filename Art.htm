@@ -33,33 +33,78 @@
   }
  </style>
 
-  <!-- Changing images on home page
+  <!-- SLIDESHOW WITH LINKS ON IMAGE
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script language="javascript" type="text/javascript">
-var timerid = 0;
-var images = new Array( "/images/Review_Installation.jpg", "/images/Untitled_Light_and_String.jpg", "/images/Untitled_Red_Green_Ceiling_Tiles.jpg", "images/1Day_Dark.jpg", "images/1Day_Light.jpg", "images/Untitled_Rope_Bag_3D_Plates_Hose.jpg", "/images/GreenPlasticWrap_in_Gallery_View.jpg");
-var countimages = 0;
-function startTime()
-{
-	if(timerid)
-	{
-		timerid = 0;
-	}
-	var tDate = new Date();
-	
-	if(countimages == images.length)
-	{
-		countimages = 0;
-	}
-	if(tDate.getSeconds() % 5 == 0)
-    {
-        document.getElementById("img1").src = images[countimages];
-        countimages++;
-    }
-	
-	timerid = setTimeout("startTime()", 1000);
-}
-   </script>   
+  <script type="text/javascript"> 
+var i = 0; 
+var image = new Array();   
+// LIST OF IMAGES 
+image[0] = "/images/GradientPaperLandscape.jpeg"; 
+image[1] = "/images/TilesLikeCanvas.jpeg"; 
+image[2] = "/images/Drops.jpeg";
+image[3] = "/images/TheEnd.jpeg";
+image[4] = "/images/2550000255.jpeg";      
+var k = image.length-1;    
+
+var caption = new Array(); 
+// LIST OF CAPTIONS 
+caption[0] = "Gradient Paper Landscape (Green & Amber), 2017
+Digital Photograph."; 
+caption[1] = "Tiles like Canvas, 2017
+Sight-specific light and space installation (Green LED, red LED, ceiling tiles from installation site, the void. Installation detail). Dimensions variable."; 
+caption[2] = "Drops, 2018
+Sight-specific sound and light installation (RGB LED, CDs, mirrors, water, dripping water, sink, water faucets. Installation view of sink and partial light reflection effects onto adjacent walls). Dimensions variable."; 
+
+var link= new Array();   
+// LIST OF LINKS 
+link[0] = "https://www.siteforinfotech.com/"; 
+link[1] = "https://www.siteforinfotech.com/p/tutorial.html"; 
+link[2] = "https://www.siteforinfotech.com/p/mcqs.html";   
+    
+
+function swapImage(){ 
+var el = document.getElementById("mydiv"); 
+el.innerHTML=caption[i]; 
+var img = document.getElementById("slide"); 
+img.src= image[i]; 
+var a = document.getElementById("link"); 
+a.href= link[i]; 
+
+if(i < k ) { i++;}  
+else  { i = 0; } 
+setTimeout("swapImage()",5000); 
+} 
+function addLoadEvent(func) { 
+var oldonload = window.onload; 
+if (typeof window.onload != 'function') { 
+window.onload = func; 
+} else  { 
+window.onload = function() { 
+if (oldonload) { 
+oldonload(); 
+} 
+func(); 
+} 
+} 
+} 
+addLoadEvent(function() { 
+swapImage(); 
+});  
+</script> 
+<table style="border:none;background-color:transparent;"> 
+<tr> 
+<td> 
+<a name="link" id="link" href="https://www.siteforinfotech.com/" target="_blank"><img name="slide" id="slide" alt 
+
+="my images" height="285" width="485" src="image-1.png"/></a> 
+</td> 
+</tr> 
+<tr> 
+<td align="center"style="font:small-caps bold 15px georgia; color:blue;"> 
+<div id ="mydiv"></div>
+</td> 
+</tr>  
+</table>   
 </head>
     
 <body onload="startTime();">
