@@ -7,6 +7,6 @@
     width: 200px
 }
 .gallery img:hover {
-    filter: brightness(-50%);
+    filter: brightness(50%);
     transform: scale(1.1);
 }
