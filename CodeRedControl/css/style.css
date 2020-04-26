@@ -7,6 +7,6 @@
     width: 200px
 }
 .gallery img:hover {
-    filter: grayscale(50%);
+    filter: grayscale(100%) brightness(50%);
     transform: scale(1.1);
 }
