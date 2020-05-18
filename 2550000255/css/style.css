@@ -4,7 +4,8 @@
 .gallery img {
     transition: 1s;
     padding: 5px;
-    height: 180px
+    min-width: inherit;
+    min-height: inherit
 }
 .gallery img:hover {
     transform: scale(1.1);
