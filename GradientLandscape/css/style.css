@@ -3,8 +3,11 @@
 }
 .gallery img {
     transition: 1s;
-    padding: 5px;
-    width: 180px
+    padding: 10px;
+    width: 150px;
+    vertical-align: middle;
+    align-items: center;
+    box-sizing: border-box;
 }
 .gallery img:hover {
     transform: scale(1.1);
