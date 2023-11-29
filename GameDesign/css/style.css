@@ -1,0 +1,14 @@
+.gallery {
+    margin: 10px 0px 10px 0px;
+}
+.gallery img {
+    transition: 1s;
+    padding: 10px;
+    width: 150px;
+    vertical-align: middle;
+    align-items: center;
+    box-sizing: border-box;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
